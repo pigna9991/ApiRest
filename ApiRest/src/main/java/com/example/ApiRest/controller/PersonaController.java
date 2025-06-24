@@ -15,7 +15,7 @@ public class PersonaController {
     @Autowired
     private PersonaService personaService;
 
-    //metodo che restituisce tutte le eprsone nel database
+    //metodo che restituisce tutte le persone nel database
     @GetMapping("/getPersonas")
     public ResponseEntity<List<String>> getAll() {
         List<String> listaPersone = personaService.getALl();
@@ -26,7 +26,7 @@ public class PersonaController {
         return ResponseEntity.ok(listaPersone);
     }
 
-    //metodo ceh restituisce solamente una persona in abse al codice fiscale
+    //metodo che restituisce solamente una persona in base al codice fiscale
     @GetMapping("/getPersona/{codiceFiscale}")
     public ResponseEntity<String> findByCodiceFiscale(@PathVariable String codiceFiscale) {
 
